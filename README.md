@@ -28,7 +28,7 @@ sudo apt-get install -y libeigen3-dev
 `cargo build` will perform two things:
 
 - Build `klusolvex` (an external dependency of `dss_capi`) for a `linux_x64` target.
-- Produce bindings for the `dss_capi`.
+- Produce bindings for `dss_capi`.
 
 After running `cargo build`, **_you must build `dss_capi` yourself_** in order to actually use the `dss_capi` library.
 ```
