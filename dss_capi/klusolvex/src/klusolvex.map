@@ -1,0 +1,30 @@
+LIBKLUSOLVEX_1.0 {
+global:
+    NewSparseSet;
+    GetFlops;
+    ZeroSparseSet;
+    FactorSparseMatrix;
+    SolveSparseSet;
+    DeleteSparseSet;
+    AddMatrixElement;
+    GetSize;
+    SetLogFile;
+    GetNNZ;
+    GetSparseNNZ;
+    GetSingularCol;
+    GetRCond;
+    GetRGrowth;
+    GetCondEst;
+    GetMatrixElement;
+    AddPrimitiveMatrix;
+    GetCompressedMatrix;
+    GetTripletMatrix;
+    FindIslands;
+    mvmult;
+    IncrementMatrixElement;
+    ZeroiseMatrixElement;
+    klusolve_metis;
+    SetOptions;
+local:
+    *;
+};
