@@ -17,7 +17,7 @@ fn main() {
     klusolvex_config.build();
 
     let klusolvex_lib_src = "dss_capi/klusolvex/lib/linux_x64/libklusolvexd.so";
-    let klusolvex_lib_dst = "dss_capi/lib/linux_x64/libklusolvexd.so";
+    let klusolvex_lib_dst = "dss_capi/lib/linux_x64/libklusolvex.so";
     fs::copy(klusolvex_lib_src, klusolvex_lib_dst).expect("Failed to copy klusolvex");
 
     let bindings = bindgen::Builder::default()
