@@ -33,5 +33,6 @@ fn main() {
         .expect("Couldn't write bindings!");
 
     println!("cargo:rustc-link-lib=dss_capi");
+    println!("cargo:rustc-link-lib=dylib=klusolvex");
     println!("cargo:rustc-link-search=dss_capi/lib/linux_x64");
 }
