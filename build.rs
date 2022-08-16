@@ -18,7 +18,7 @@ fn main() {
 
     let klusolvex_lib_src = "dss_capi/klusolvex/lib/linux_x64/libklusolvexd.so";
     let klusolvex_lib_dst = "dss_capi/lib/linux_x64/libklusolvex.so";
-    fs::copy(klusolvex_lib_src, klusolvex_lib_dst).expect("Failed to copy klusolvex");
+    fs::copy(klusolvex_lib_src, klusolvex_lib_dst).expect("Failed to write to dss_capi/lib/linu_x64");
 
     let bindings = bindgen::Builder::default()
         .header("dss_capi/include/dss_capi.h")
@@ -32,7 +32,11 @@ fn main() {
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings!");
 
+    let pwd = std::env::var("CARGO_MANIFEST_DIR").expect("CARGO_MANIFEST_DIR not set");
+    let mut lib = pwd;
+    lib.push_str("/dss_capi/lib/linux_x64");
+
+    println!("cargo:rustc-link-search=native={}", lib);
+    println!("cargo:rustc-link-arg=-Wl,-rpath={}", lib);
     println!("cargo:rustc-link-lib=dss_capi");
-    println!("cargo:rustc-link-lib=dylib=klusolvex");
-    println!("cargo:rustc-link-search=dss_capi/lib/linux_x64");
 }

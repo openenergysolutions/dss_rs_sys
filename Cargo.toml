@@ -9,3 +9,15 @@ links = "dss_capi"
 bindgen = "0.60.1"
 cmake = "0.1"
 cmd_lib = "1.3.0"
+
+[profile.dev]
+rpath = true
+
+[profile.release]
+rpath = true
+
+[profile.test]
+rpath = true
+
+[profile.bench]
+rpath = true
