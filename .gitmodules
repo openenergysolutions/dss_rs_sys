@@ -1,0 +1,6 @@
+[submodule "dss_capi"]
+	path = dss_capi
+	url = git@github.com:dss-extensions/dss_capi.git
+[submodule "klusolve"]
+	path = klusolve
+	url = git@github.com:dss-extensions/klusolve.git

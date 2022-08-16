@@ -1,7 +1,0 @@
-BasedOnStyle: "Webkit"
-UseTab: Never
-IndentWidth: 4
-BreakBeforeBraces: Allman
-AllowShortIfStatementsOnASingleLine: false
-IndentCaseLabels: false
-ColumnLimit: 0
