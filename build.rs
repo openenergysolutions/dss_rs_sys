@@ -36,7 +36,6 @@ fn main() {
     let mut lib = pwd;
     lib.push_str("/dss_capi/lib/linux_x64");
 
-    println!("cargo:rustc-link-search=native={}", lib);
     println!("cargo:rustc-link-arg=-Wl,-rpath={}", lib);
     println!("cargo:rustc-link-lib=dss_capi");
 }

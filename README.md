@@ -33,8 +33,8 @@ sudo apt-get install -y libeigen3-dev
 After running `cargo build`, **_you must build `dss_capi` yourself_** in order to actually use the `dss_capi` library.
 ```
 cd dss_capi
-bash build/build_linux_x64.sh
+fpc -Px86_64 @src/linux-x64.cfg -B src/dss_capi.lpr
 cd ../
 ```
 
-All object files will be in `dss_capi/lib/linux_x64`. Using them requires setting `LD_LIBRARY_PATH` to include their path.
+All object files will be in `dss_capi/lib/linux_x64`.
