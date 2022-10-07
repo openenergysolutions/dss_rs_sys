@@ -12,7 +12,6 @@ fn main() {
     klusolvex_config.build();
 
     let mut klusolvex_config = cmake::Config::new("klusolve");
-    klusolvex_config.configure_arg("--build");
     klusolvex_config.configure_arg(".");
     klusolvex_config.build();
 
