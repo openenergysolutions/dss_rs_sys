@@ -15,7 +15,7 @@ fn main() {
     klusolvex_config.configure_arg(".");
     klusolvex_config.build();
 
-    let klusolve_lib_src = "klusolve/lib/linux_x64/libklusolvexd.so";
+    let klusolve_lib_src = "klusolve/lib/linux_x64/libklusolvex.so";
     let klusolve_lib_dst = "dss_capi/lib/linux_x64/libklusolvex.so";
     fs::copy(klusolve_lib_src, klusolve_lib_dst).expect("Failed to write to dss_capi/lib/linux_x64");
 
